@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Management</title>
+  <script src="https://kit.fontawesome.com/3875d6bd45.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&family=Montserrat:wght@500&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script> <!-- I followed the suggestion and I used the defer to put the scrip in head --> 
+</head>
+
+<body>
+  <h1>Track your daily tasks!🦋</h1> <!--I added this h1 to be a motto for the app--> 
+
+<main> <!-- I followed the suggestion and instead of the app-container div I used main --> 
+  <div class="taskslists">
+    <div id="tasksProgress" >
+      <h2>Not Completed!</h2>
+      <ul id="progressTasks"></ul>
+    </div>
+    <div id="tasksCompleted">
+      <h2>Done!</h2>
+      <ul id="completedTasks"></ul>
+    </div>
+  </div>
+</main>
+
+<br>
+
+<div class="newTaskButton">
+  <button id="dialogBtn">Add a new task</button>
+</div>
+
+
+<ul class="navbar"> <!-- added this navbar for the feature, I intend to make a few more pages --> 
+  <li class="navbar-item"><a href="about.asp">About</a></li>
+  <li class="navbar-item"><a href="contact.asp">Contact</a></li>
+  <li class="navbar-item"><a href="default.asp">Home</a></li>
+</ul>
+
+<footer style="left: 0px">
+  <svg viewBox="0 -20 700 110" width="100%" height="110" preserveAspectRatio="none">
+    <path transform="translate(0, -20)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="rgb(44, 117, 44)" />
+    <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="rgb(44, 90, 44)" />
+  </svg>
+</footer>
+
+<dialog id="taskForm">
+  <form id="addTaskForm">
+    <p>
+      <label for="title">Title: </label>
+      <input class="dialogItem" type="text" id="title" maxlength="50" required>  
+    </p>
+    <p>
+      <label for="description">Description: </label>
+      <textarea class="dialogItem" id="description" maxlength="250" required></textarea>  
+    </p>
+    <p>
+      <label for="assignee">Assignee: </label>
+      <input class="dialogItem" type="email" id="assignee" required>  
+    </p>
+   
+    <button class="addTask" type="submit">Add task</button>
+    <button class="cancelTask" type="button" id="cancelFormButton">Cancel action</button>
+  </form>
+</dialog>
+
+</body>
+</html>
